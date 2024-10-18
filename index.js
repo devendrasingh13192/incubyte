@@ -1,16 +1,16 @@
 class addNumbers {
-    // Method to add numbers from a string
-    add(numbers) {
-      if (numbers === "") {
-        return 0; // Return 0 if the string is empty
-      }
-  
-      // Split the string by commas and convert each to a number
-      const numArray = numbers.split(",").map(Number);
-  
-      // Sum the numbers
-      return numArray.reduce((sum, num) => sum + num, 0);
+     // Method to add numbers from a string
+  add(numbers) {
+    if (numbers === "") {
+      return 0; // Return 0 if the string is empty
     }
+
+    // Split the string by commas or new lines and convert each to a number
+    const numArray = numbers.split(/[\n,]+/).map(Number);
+
+    // Sum the numbers
+    return numArray.reduce((sum, num) => sum + num, 0);
+  }
   }
   
   // Example usage:
